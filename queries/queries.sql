@@ -98,7 +98,7 @@ LEFT JOIN asignatura a ON g.id = a.id_grado
 GROUP BY g.nombre ORDER BY total DESC;
 
 -- 21. Retorna un llistat amb el nom de tots els graus existents en la base de dades i el nombre d'assignatures que té cadascun, dels graus que tinguin més de 40 assignatures associades. (grau, total)
-SELECT g.nombre AS grado, COUNT(a.id) AS total
+SELECT g.nombre AS grau, COUNT(a.id) AS total
 FROM grado g
 INNER JOIN asignatura a ON g.id = a.id_grado
 GROUP BY g.nombre
